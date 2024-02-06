@@ -24,9 +24,25 @@ public class BinarySearch {
                 left = mid + 1;
             }
         }
+
         return -1;
     }
 
+
+    public static int recursionBinarySearch(Integer[] nums, int target, int left, int right) {
+        if (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }else if (nums[mid] > target) {
+                return recursionBinarySearch(nums, target, left, mid - 1);
+            } else if (nums[mid] < target) {
+                return recursionBinarySearch(nums, target, mid + 1, right);
+            }
+        }
+
+        return -1;
+    }
 
     public static void main(String[] args) {
         // Just generate data
@@ -39,7 +55,8 @@ public class BinarySearch {
         // The element that should be found
         int shouldBeFound = integers[r.nextInt(size - 1)];
 
-        int result = binarySearch(integers, shouldBeFound, 0, integers.length);
+        // int result = binarySearch(integers, shouldBeFound, 0, integers.length);
+        int result = recursionBinarySearch(integers, shouldBeFound, 0, integers.length);
         System.out.println("nums = " + Arrays.toString(integers));
         System.out.println("target=" + shouldBeFound);
         System.out.println("result=" + result);
