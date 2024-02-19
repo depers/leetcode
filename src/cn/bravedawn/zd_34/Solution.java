@@ -6,14 +6,17 @@ import java.util.Arrays;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/2/6 17:13
+ *
+ * 34. 在排序数组中查找元素的第一个和最后一个位置
  */
 public class Solution {
 
     private static int lowerBound(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
-        while (left <= right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
+            // 如果当前中间位置的值等于目标值，依然往左侧找，找目标值的最小索引位置
             if (nums[mid] >= target) {
                 right = mid - 1;
             } else if (nums[mid] < target) {
@@ -27,11 +30,12 @@ public class Solution {
     private static int upperBound(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
-        while (left <= right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] > target) {
                 right = mid - 1;
             } else if (nums[mid] <= target) {
+                // 如果当前中间位置的值等于目标值，则仍往右走，找到目标值的最大索引位置
                 left = mid + 1;
             }
         }

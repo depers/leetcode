@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 public class BinarySearch {
 
 
-    public static int binarySearch(Integer[] nums, int target, int left, int right) {
+    public static int binarySearch(int[] nums, int target, int left, int right) {
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
@@ -29,8 +29,8 @@ public class BinarySearch {
     }
 
 
-    public static int recursionBinarySearch(Integer[] nums, int target, int left, int right) {
-        if (left <= right) {
+    public static int recursionBinarySearch(int[] nums, int target, int left, int right) {
+        if (left < right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 return mid;
@@ -45,20 +45,12 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        // Just generate data
-        Random r = ThreadLocalRandom.current();
+        int[] nums = {2, 8, 19, 66, 77, 99};
+        int target = 99;
 
-        int size = 100;
-        int maxElement = 100000;
-
-        Integer[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().boxed().toArray(Integer[] ::new);
-        // The element that should be found
-        int shouldBeFound = integers[r.nextInt(size - 1)];
-
-        // int result = binarySearch(integers, shouldBeFound, 0, integers.length);
-        int result = recursionBinarySearch(integers, shouldBeFound, 0, integers.length);
-        System.out.println("nums = " + Arrays.toString(integers));
-        System.out.println("target=" + shouldBeFound);
+        int result = binarySearch(nums, target, 0, nums.length);
+        System.out.println("nums = " + Arrays.toString(nums));
+        System.out.println("target=" + target);
         System.out.println("result=" + result);
 
     }
