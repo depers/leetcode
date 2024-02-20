@@ -13,14 +13,24 @@ import java.util.stream.IntStream;
 public class BinarySearch {
 
 
+    /**
+     * 记住这个框架套就可以
+     * @param nums
+     * @param target
+     * @param left
+     * @param right
+     * @return
+     */
     public static int binarySearch(int[] nums, int target, int left, int right) {
-        while (left <= right) {
+        while (left < right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 return mid;
             } else if (nums[mid] > target) {
+                // 这里可能会调整
                 right = mid - 1;
             } else if (nums[mid] < target) {
+                // 这里可能会调整
                 left = mid + 1;
             }
         }
