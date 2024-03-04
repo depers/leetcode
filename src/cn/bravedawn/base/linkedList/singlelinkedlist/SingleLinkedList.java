@@ -75,6 +75,8 @@ public class SingleLinkedList<E> {
         }
         return null;
     }
+
+
     public void print() {
         Node<E> node = head.getNext();
         while (node != null) {
