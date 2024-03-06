@@ -3,6 +3,7 @@
 
 ## 第一阶段刷题
 * 开始时间：2024年1月24日
+* LeetCode 100题：https://leetcode.cn/studyplan/top-100-liked/
 * 刷题参考项目：https://github.com/doocs/leetcode
 * 刷题统计
 
