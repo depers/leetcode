@@ -7,7 +7,7 @@ import java.util.Arrays;
  * @program : leetcode
  * @date : Created in 2024/2/6 17:13
  *
- * 34. 在排序数组中查找元素的第一个和最后一个位置
+ * 34.在排序数组中查找元素的第一个和最后一个位置
  */
 public class Solution {
 
