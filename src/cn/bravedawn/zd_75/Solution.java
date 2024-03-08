@@ -11,7 +11,7 @@ public class Solution {
 
 
     public static void quickSort(int[] nums, int left, int right) {
-        while (left < right) {
+        if (left < right) {
             int pivotIndex = partition(nums, left, right);
             quickSort(nums, left, pivotIndex - 1);
             quickSort(nums, pivotIndex + 1, right);
