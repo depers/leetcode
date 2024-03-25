@@ -8,7 +8,7 @@ import java.util.Map;
  * @author : depers
  * @date : Created in 2024/3/9 20:29
  *
- * 621.LRU缓存（阿里钉钉面试题）
+ * 146.LRU缓存（阿里钉钉面试题）
  */
 public class LRUCache {
 
