@@ -14,6 +14,11 @@ import java.util.List;
 public class Solution {
 
 
+    /**
+     * 生成括号
+     * @param n 生成括号的对数
+     * @return
+     */
     public static List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<>();
 
@@ -26,6 +31,14 @@ public class Solution {
         return res;
     }
 
+    /**
+     * 递归函数
+     * @param curStr 生成一种情况的字符串
+     * @param left 左子树下探的深度
+     * @param right 右子树下探的深度
+     * @param n 生成括号的对数，或者说下探的最大深度
+     * @param res 存储对数字符串的列表
+     */
     private static void dfs(String curStr, int left, int right, int n, List<String> res) {
         // 在递归终止的时候，直接把它添加到结果集
         if (left == n && right == n) {

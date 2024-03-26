@@ -4,6 +4,8 @@ package cn.bravedawn.zd_200;
  * @Author : fengx9
  * @Project : leetcode-main
  * @Date : Created in 2024-03-15 13:56
+ *
+ * 200.岛屿数量
  */
 public class Solution {
 
@@ -43,8 +45,8 @@ public class Solution {
 
     // 判断坐标 (r, c) 是否在网格中
     private static boolean inArea(char[][] grid, int r, int c) {
-        return '0' <= r && r < grid.length
-                && '0' <= c && c < grid[0].length;
+        return 0 <= r && r < grid.length
+                && 0 <= c && c < grid[0].length;
     }
 
 

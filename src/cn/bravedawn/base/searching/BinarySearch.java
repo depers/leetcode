@@ -14,6 +14,7 @@ public class BinarySearch {
 
 
     /**
+     * 二分搜索的非递归实现
      * 记住这个框架套就可以
      * @param nums
      * @param target
@@ -39,6 +40,14 @@ public class BinarySearch {
     }
 
 
+    /**
+     * 二分搜索的递归实现
+     * @param nums
+     * @param target
+     * @param left
+     * @param right
+     * @return
+     */
     public static int recursionBinarySearch(int[] nums, int target, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;

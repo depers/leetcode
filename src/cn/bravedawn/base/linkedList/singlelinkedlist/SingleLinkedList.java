@@ -5,7 +5,7 @@ package cn.bravedawn.base.linkedList.singlelinkedlist;
  * @program : leetcode
  * @date : Created in 2024/1/25 10:57
  *
- * 采用头插法实现的链表
+ * 采用头插法实现的链表（拼多多）
  */
 public class SingleLinkedList<E> {
 
