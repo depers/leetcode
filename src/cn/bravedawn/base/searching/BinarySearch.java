@@ -14,7 +14,7 @@ public class BinarySearch {
 
 
     /**
-     * 二分搜索的非递归实现
+     * 二分搜索的非递归实现，有一个前提，二分搜索的数组本身是有序的
      * 记住这个框架套就可以
      * @param nums
      * @param target
