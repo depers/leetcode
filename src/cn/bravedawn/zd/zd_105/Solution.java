@@ -8,6 +8,8 @@ import java.util.Map;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/4/18 17:29
+ *
+ * 105.从前序与中序遍历序列构造二叉树
  */
 public class Solution {
 
@@ -16,7 +18,7 @@ public class Solution {
      * 中序遍历：[左子树，根节点，右子树]
      */
 
-    private Map<Integer, Integer> initMap;
+    private static Map<Integer, Integer> initMap;
     
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
@@ -57,11 +59,11 @@ public class Solution {
 
         // 递归构造左子树
         // 最后的四个参数的意思分别是：左子树在前序遍历中的左下标，左子树在前序遍历中的右下标，左子树在中序遍历中的左下标，左子树在中序遍历中的右下标
-        node.left = myBuildTree(preorder, inorder, preorderLeft + 1, preorderLeft + leftNodeSize, inorderLeft, rootIndexForInorder -1);
+        node.left = myBuildTree(preorder, inorder, preorderLeft + 1, preorderLeft + leftNodeSize, inorderLeft, rootIndexForInorder - 1);
 
         // 递归构造右子树
         // 最后的四个参数的意思分别是：右子树在前序遍历中的左下标，右子树在前序遍历中的右下标，右子树在中序遍历中的左下标，右子树在中序遍历中的右下标
-        node.right = myBuildTree(preorder, inorder, preorderLeft + leftNodeSize, preorderRight, rootIndexForInorder + 1, inorderRight);
+        node.right = myBuildTree(preorder, inorder, preorderLeft + leftNodeSize + 1, preorderRight, rootIndexForInorder + 1, inorderRight);
         return node;
     }
 
@@ -84,4 +86,11 @@ public class Solution {
         }
     }
 
+
+    public static void main(String[] args) {
+        int[] preorder = {3,9,20,15,7};
+        int[] inorder = {9,3,15,20,7};
+        Solution solution = new Solution();
+        solution.buildTree(preorder, inorder);
+    }
 }
