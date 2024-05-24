@@ -9,6 +9,14 @@ package cn.bravedawn.base.linkedList.singlelinkedlist;
  */
 public class SingleLinkedList<E> {
 
+    /**
+     * 链表涉及的操作
+     * 1.添加
+     * 2.删除指定位置的元素
+     * 3.长度
+     * 4.获取指定位置的元素
+     */
+
     private Node<E> head;
     private int size;
 

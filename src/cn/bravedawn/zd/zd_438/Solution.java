@@ -13,6 +13,10 @@ import java.util.List;
  */
 public class Solution {
 
+    /**
+     * 字符串截取，这种方法耗时过长
+     */
+
 
     public static void main(String[] args) {
         String s = "cbaebabacd";
