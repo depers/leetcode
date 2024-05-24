@@ -14,6 +14,8 @@ public class Solution2 {
 
     /**
      * 滑动窗口版本
+     *
+     * 参考博客：https://juejin.cn/post/7229503643506786360
      */
 
     public List<Integer> findAnagrams(String s, String p) {
