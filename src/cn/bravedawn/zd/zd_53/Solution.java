@@ -11,40 +11,18 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        int[] nums = {-2,-1};
+        int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(maxSubArray(nums));
     }
 
     public static int maxSubArray(int[] nums) {
-        int len = nums.length;
-        int[] dp = new int[len];
-        dp[0] = nums[0];
-        int max = nums[0];
-
-        if (len == 1) {
-            return nums[0];
+        int pre = 0, maxAns = nums[0];
+        for (int x : nums) {
+            pre = Math.max(pre + x, x);
+            maxAns = Math.max(maxAns, pre);
         }
-
-        for (int i = 0; i < len; i++) {
-            int sum = nums[i];
-            dp[i] = nums[i];
-
-            for (int j = i + 1; j < len; j++) {
-                sum += nums[j];
-
-                if (dp[i] < sum) {
-                    dp[i] = sum;
-                }
-            }
-
-
-            max = Math.max(max, dp[i]);
-        }
-
-
-        return max;
+        return maxAns;
     }
-
 
 
 }
