@@ -58,7 +58,6 @@ public class Trie {
         public Node() {
             next = new Node[26];
         }
-
     }
 
 }
