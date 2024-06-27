@@ -10,7 +10,7 @@ import java.util.List;
  * @program : leetcode
  * @date : Created in 2024/6/25 11:11
  *
- * 647.回文子串
+ * 647.回文子串，参考代码随想录
  */
 public class Solution {
 
