@@ -4,6 +4,7 @@ package cn.bravedawn.zd.zd_494;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/7/8 13:07
+ * 494.目标和
  */
 public class Solution {
 
