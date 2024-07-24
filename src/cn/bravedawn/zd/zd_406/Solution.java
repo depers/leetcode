@@ -32,24 +32,15 @@ public class Solution {
 
         System.out.println("sort array: " + Arrays.deepToString(people));
 
-        List<int[]> list = new LinkedList<>();
-        ListIterator<int[]> listIterator = list.listIterator();
+        LinkedList<int[]> list = new LinkedList<>();
 
         for (int i = 0; i < people.length; i++) {
             int position = people[i][1];
-            listIterator.next();
-            listIterator.add(people[i]);
+            list.add(position, people[i]);
         }
 
         return list.toArray(new int[list.size()][]);
 
-    }
-
-    public boolean cmp(int[] a, int[] b) {
-        if (a[0] == b[0]) {
-            return a[1] > b[1];
-        }
-        return a[0] > b[0];
     }
 
 }
