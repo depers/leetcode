@@ -4,6 +4,8 @@ package cn.bravedawn.zd.zd_394;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/9/2 21:55
+ *
+ * 错误尝试第一版
  */
 public class Solution {
 

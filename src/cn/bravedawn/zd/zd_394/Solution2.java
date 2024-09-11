@@ -7,6 +7,8 @@ import java.util.Deque;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/9/2 22:06
+ *
+ * 错误尝试第二版
  */
 public class Solution2 {
 
