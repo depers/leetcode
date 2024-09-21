@@ -1,9 +1,6 @@
 package cn.bravedawn.zd.zd_347;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * @author : depers
@@ -14,7 +11,14 @@ import java.util.PriorityQueue;
  */
 public class Solution2 {
 
-    public int topKFrequent(int[] nums, int k) {
+    public static void main(String[] args) {
+        int[] nums = {1, 1, 1, 2, 2, 3};
+        Solution2 solution = new Solution2();
+        System.out.println(Arrays.toString(solution.topKFrequent(nums, 2)));
+    }
+
+
+    public int[] topKFrequent(int[] nums, int k) {
 
         Map<Integer, Integer> occurrence = new HashMap<>();
         for (int num : nums) {
@@ -37,7 +41,16 @@ public class Solution2 {
                     queue.poll();
                     queue.offer(new int[]{num, count});
                 }
+            } else {
+                queue.offer(new int[]{num, count});
             }
         }
+
+        int[] ret = new int[k];
+        for (int i = 0; i < k; ++i) {
+            ret[i] = queue.poll()[0];
+        }
+        return ret;
+
     }
 }

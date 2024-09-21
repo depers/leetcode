@@ -6,7 +6,7 @@ import java.util.*;
  * @author : depers
  * @program : leetcode
  * @date : Created in 2024/9/11 22:02
- *
+ * <p>
  * 错误尝试第一版，题目意思没理解
  */
 public class Solution {
@@ -33,7 +33,7 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        int[] nums = {1,1,1,2,2,3};
+        int[] nums = {1, 1, 1, 2, 2, 3};
         Solution solution = new Solution();
         System.out.println(Arrays.toString(solution.topKFrequent(nums, 2)));
     }
