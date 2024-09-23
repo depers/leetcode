@@ -127,7 +127,8 @@
 | 73 | 406.根据身高重建队列          | 贪心算法                  |        |    |                 | [406.根据身高重建队列](https://programmercarl.com/0406.%E6%A0%B9%E6%8D%AE%E8%BA%AB%E9%AB%98%E9%87%8D%E5%BB%BA%E9%98%9F%E5%88%97.html)                                                      |                                                                                                                                                                  |
 | 74 | 399.除法求值              | 并查集                   |        |    |                 | [399. 除法求值 Evaluate Division 【LeetCode 力扣官方题解】](https://www.bilibili.com/video/BV1Ko4y1f7eK/?spm_id_from=333.337.search-card.all.click&vd_source=9a9443ad05b4d05785ed56802e0553e9) |
 | 75 | 394.字符串解码             |                       | 栈      |    |                 | [字符串解码（辅助栈法 / 递归法，清晰图解）](https://leetcode.cn/problems/decode-string/solutions/19447/decode-string-fu-zhu-zhan-fa-di-gui-fa-by-jyd/?envType=problem-list-v2&envId=2cktkvj)          |
-| 76 | 347.前K个高频元素        |                       | 优先级队列  |    |                 | [前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/solutions/402568/qian-k-ge-gao-pin-yuan-su-by-leetcode-solution/?envType=problem-list-v2&envId=2cktkvj)                                                                                                                                                                      |
+| 76 | 347.前K个高频元素           |                       | 优先级队列  |    |                 | [前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/solutions/402568/qian-k-ge-gao-pin-yuan-su-by-leetcode-solution/?envType=problem-list-v2&envId=2cktkvj)           |
+| 77 | 240.搜索二维矩阵 II        | 贪心算法                  |        |    |                 | [贪心算法](https://leetcode.cn/problems/search-a-2d-matrix-ii/solutions/2361487/240-sou-suo-er-wei-ju-zhen-iitan-xin-qin-7mtf/?envType=problem-list-v2&envId=2cktkvj)                  |
 
 
 
