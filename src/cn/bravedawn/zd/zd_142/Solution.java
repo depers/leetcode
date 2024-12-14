@@ -8,7 +8,7 @@ package cn.bravedawn.zd.zd_142;
  * 142.环形链表II
  *
  * 推演过程：
- * 假设x是链表头结点到环起始节点的距离，y是环的起始节点到（快指针和慢指针在环内相遇节点）的距离，z是相遇节点到环起始节点的距离
+ * 假设x是链表头结点到环起始节点的距离，y是环的起始节点到相遇节点（快指针和慢指针在环内相遇节点）的距离，z是相遇节点到环起始节点的距离
  * 因为快指针每次走两步，慢指针走一步
  * 则慢指针行走的距离是x+y，快指针行走的距离是x+y+n(y+z)，这里的n指的是快指针转的圈数
  * 则得出等式：2(x+y) = x+y+n(y+z)，最后推导出x=(n-1)(y+z)+z，这里的n是大于等于1的
@@ -39,15 +39,14 @@ public class Solution {
             // 说明快指针和慢指针在环内相遇了
             if (fast == slow) {
                 // 寻找环的起始节点
-                ListNode index1 = fast;
-                ListNode index2 = head;
-                // x=z的逻辑就是在这里体现的
-                while (index1 != index2) {
-                    index1 = index1.next;
-                    index2 = index2.next;
+                ListNode index = head;
+                // 当x=z时，开始寻找环的入口，如果快慢指针相遇的节点不是在x=z的位置相遇的话，需要快慢指针每次各走一步寻找环的入口
+                while (index != slow) {
+                    index = index.next;
+                    slow = slow.next;
                 }
                 // 找到环的起点了
-                return index1;
+                return index;
             }
         }
         return null;
