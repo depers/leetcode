@@ -11,6 +11,11 @@ import java.util.Arrays;
  */
 public class Solution {
 
+
+    /**
+     * 这种算法的思路就是将末尾的最后一个数，依次换到第一个位置。如果k=1，就是将上述步骤执行一遍；如果k=2，就将上述步骤执行两遍
+     */
+
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int k = 3;
@@ -28,7 +33,6 @@ public class Solution {
         int len = nums.length;
 
         for (int i = 0; i < k; i++) {
-
             for (int j = len - 1; j >= 1; j--) {
                 swap(nums, j - 1, j);
             }
