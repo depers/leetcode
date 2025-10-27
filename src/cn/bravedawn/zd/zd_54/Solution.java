@@ -32,41 +32,42 @@ public class Solution {
         int right = matrix[0].length - 1;
 
         while (true) {
-
+            // 向右走
             for (int i = left; i <= right; i++) {
                 result.add(matrix[top][i]);
             }
 
+            // 向下走
             if (top < below) {
                 top++;
             } else {
                 break;
             }
-
             for (int i = top; i <= below; i++) {
                 result.add(matrix[i][right]);
             }
 
+            // 向左走
             if (right > left) {
                 right--;
             } else {
                 break;
             }
-
             for (int i = right; i >= left; i--) {
                 result.add(matrix[below][i]);
             }
 
+            // 向上走
             if (below > top) {
                 below--;
             } else {
                 break;
             }
-
             for (int i = below; i >= top; i--) {
                 result.add(matrix[i][left]);
             }
 
+            // 向右走
             if (left < right) {
                 left++;
             } else {
